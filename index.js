@@ -38,3 +38,16 @@ function every(arr, predicate) {
 
 console.log(every([2, 4, 6], (n) => n % 2 === 0));
 console.log(every([1, 2, 3], (n) => n % 2 === 0));
+
+
+function addPunctuation(punctuation) {
+  return (string) => {
+// console.log(string, punctuation);
+
+    return string + punctuation;
+  };
+}
+const addExcitement = addPunctuation('!!!');
+
+console.log(addExcitement('Hello World'));
+console.log(addExcitement('Pokemon, catch em all'));
