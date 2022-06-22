@@ -39,19 +39,35 @@ function every(arr, predicate) {
 console.log(every([2, 4, 6], (n) => n % 2 === 0));
 console.log(every([1, 2, 3], (n) => n % 2 === 0));
 
-
 function addPunctuation(punctuation) {
   return (string) => {
-// console.log(string, punctuation);
+    // console.log(string, punctuation);
 
     return string + punctuation;
   };
 }
-const addExcitement = addPunctuation('!!!');
+const addExcitement = addPunctuation("!!!");
 
-console.log(addExcitement('Hello World'));
-console.log(addExcitement('Pokemon, catch em all'));
-const addUnsure = addPunctuation('?!?');
-console.log(addUnsure('Hello World'));
-// Hello World?!?
-console.log(addUnsure('Pokemon, catch em all'));
+console.log(addExcitement("Hello World"));
+console.log(addExcitement("Pokemon, catch em all"));
+
+const addUnsure = addPunctuation("?!?");
+console.log(addUnsure("Hello World"));
+console.log(addUnsure("Pokemon, catch em all"));
+
+function addFirst(first) {
+  return (object) => {
+    return [first, ...object];
+  };
+}
+
+const addOrange = addFirst("orange");
+console.log(addOrange(["red", "blue", "green"]));
+// [orange,red,blue,green]
+console.log(addOrange(["blue", "blue", "blue"]));
+// [orange,blue,blue,blue]
+
+const addCat = addFirst("cat");
+console.log(addCat(["dog", "bird", "lizard"]));
+// [cat,dog,bird,lizard]
+console.log(addCat(["lizard", "donkey", "whale"]));
