@@ -15,15 +15,26 @@ function map(arr, callback) {
 
 console.log(map(myArray, (n) => n * 2));
 
-
 function filter(arr, callback) {
   const filteredArray = [];
-for (let i = 0; i<arr.length; i++) {
-  if(callback(arr[i])) {
-    const item = arr[i];
-    filteredArray.push(item);
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+      const item = arr[i];
+      filteredArray.push(item);
+    }
   }
-}
   return filteredArray;
 }
-console.log(filter(myArray, n=> n %2 === 0 ));
+console.log(filter(myArray, (n) => n % 2 === 0));
+
+function every(arr, predicate) {
+  for (i = 0; i < arr.length; i++) {
+    if (predicate(arr[i]) === false) {
+      return "false";
+    }
+  }
+  return "true";
+}
+
+console.log(every([2, 4, 6], (n) => n % 2 === 0));
+console.log(every([1, 2, 3], (n) => n % 2 === 0));
