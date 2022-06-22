@@ -1,11 +1,19 @@
-DEMO: Add x to Number
----
+## DEMO: Add x to Number
 
 ## Challenge
 
 Write a function `addX` that takes a number `x` and returns a function that also takes a number but returns the sum of the initial number `x` plus the new number
 
 > **You can assume valid inputs**
+
+```js
+function addX(num) {
+  //returns a function
+  return (x) => {
+    return num + x;
+  };
+}
+```
 
 ## Test Cases
 
