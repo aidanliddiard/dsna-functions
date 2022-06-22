@@ -72,18 +72,16 @@ console.log(addCat(["dog", "bird", "lizard"]));
 // [cat,dog,bird,lizard]
 console.log(addCat(["lizard", "donkey", "whale"]));
 
-
 function fib(n) {
- if (n === 0 ) {
-  return 0;
- }
- if (n === 1 ) {
-  return 1;
- }
- const newFib  = fib(n-1) + fib(n-2);
- console.log(newFib);
- return newFib;
+  if (n === 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  const newFib = fib(n - 1) + fib(n - 2);
+  return newFib;
 }
-console.log(fib(0));  // 0
-console.log(fib(1));  // 0, 1
+console.log(fib(0)); // 0
+console.log(fib(1)); // 0, 1
 console.log(fib(6));
